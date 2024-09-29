@@ -1,0 +1,38 @@
+.link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #101828;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #d84343;
+  transition: transform 2s ease-in-out;
+}
+
+.active {
+  color: #d84343;
+}
+.navbarContainer {
+  padding: 24px 64px;
+  border-bottom: 1px solid #f2f4f7;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+.logo {
+  color: #101828;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 150%;
+  text-decoration: none;
+}
+.logoPart {
+  color: #475467;
+}
+.navbar {
+  display: flex;
+  gap: 32px;
+}

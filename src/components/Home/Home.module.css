@@ -1,0 +1,71 @@
+.homeContainer {
+  position: relative;
+  background-image: url("/Picture.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.darkStyle {
+  position: absolute;
+  z-index: 10;
+  background-color: black;
+  opacity: 20%;
+  width: 100%;
+  height: 100vh;
+}
+
+.content {
+  padding: 0 64px;
+  position: absolute;
+  z-index: 20;
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 16px;
+}
+.title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 67%;
+}
+.description {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+}
+.button {
+  padding: 16px 49px;
+  background-color: #e44848;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  -ms-border-radius: 200px;
+  -o-border-radius: 200px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #d84343;
+  transition: transform 2s ease-in-out;
+  -webkit-transition: transform 2s ease-in-out;
+  -moz-transition: transform 2s ease-in-out;
+  -ms-transition: transform 2s ease-in-out;
+  -o-transition: transform 2s ease-in-out;
+}
