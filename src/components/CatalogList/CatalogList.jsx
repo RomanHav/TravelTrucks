@@ -30,15 +30,16 @@ export default function CatalogList() {
   return (
     <ul className={css.list}>
       {catalog.map((catalogPart) => (
-        <li key={catalogPart.id}>
+        <li className={css.part} key={catalogPart.id}>
           <CatalogListPart
+            id={catalogPart.id}
             title={catalogPart.name}
             rating={catalogPart.rating}
             location={catalogPart.location}
             description={catalogPart.description}
             reviews={catalogPart.reviews.length}
             price={catalogPart.price}
-            image={catalogPart.gallery[0].original}
+            image={catalogPart.gallery[0].thumb}
             transmission={catalogPart.transmission}
             engine={catalogPart.engine}
             kitchen={catalogPart.kitchen}

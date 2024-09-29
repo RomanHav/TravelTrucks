@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import css from "./CatalogListPart.module.css";
 
 export default function CatalogListPart({
@@ -14,6 +15,7 @@ export default function CatalogListPart({
   tv,
   bathroom,
   ac,
+  id,
 }) {
   const truncateText = (text, length) => {
     return text.length > length ? text.slice(0, length) + "..." : text;
@@ -23,60 +25,97 @@ export default function CatalogListPart({
     <div className={css.partContainer}>
       <div
         className={css.imageContainer}
-        style={{ backgroundImage: `url(${image})` }}
+        style={
+          title === "Mavericks" || title === "Mesa" || title === "HI-Top Camper"
+            ? { backgroundImage: `url(${image})`, backgroundPositionX: "25%" }
+            : { backgroundImage: `url(${image})`, backgroundPositionX: "75%" }
+        }
       ></div>
-      <div>
-        <div>
-          <div>
-            <h2>{title}</h2>
-            <div>
-              <span>
-                <img src="/rating.svg" alt="Rating Icon" />
-                {rating}({reviews})
+      <div className={css.mainContainer}>
+        <div className={css.titleContainer}>
+          <div className={css.titleContent}>
+            <h2 className={css.title}>{title}</h2>
+            <div className={css.iconsContainer}>
+              <span className={css.rating}>
+                <img className={css.img} src="/rating.svg" alt="Rating Icon" />
+                {rating}({reviews} Reviews)
               </span>
-              <span>
-                <img src="/map.svg" alt="Location Icon" />
+              <span className={css.rating}>
+                <img className={css.img} src="/map.svg" alt="Location Icon" />
                 {location}
               </span>
             </div>
           </div>
-          <span>
-            {price} <img src="/heart.svg" alt="Heart Icon" />
-          </span>
+          <div>
+            <span className={css.price}>
+              &euro;{price}
+              <button className={css.likeButton}>
+                <img className={css.heart} src="/heart.svg" alt="Heart Icon" />
+              </button>
+            </span>
+          </div>
         </div>
 
-        <p>{truncateText(description, 58)}</p>
+        <p className={css.description}>{truncateText(description, 58)}</p>
 
-        <div>
+        <div className={css.categories}>
           {ac && (
-            <span>
-              <img src="/wind.svg" alt="AC Icon" /> AC
+            <span className={css.buttonCategory}>
+              <img
+                className={css.categoryImage}
+                src="/wind.svg"
+                alt="AC Icon"
+              />{" "}
+              AC
             </span>
           )}
-          <span>
-            <img src="/diagram.svg" alt="Transmission Icon" /> {transmission}
+          <span className={css.buttonCategory}>
+            <img
+              className={css.categoryImage}
+              src="/diagram.svg"
+              alt="Transmission Icon"
+            />{" "}
+            {transmission}
           </span>
-          <span>
-            <img src="/fuel-pump.svg" alt="Engine Icon" /> {engine}
+          <span className={css.buttonCategory}>
+            <img
+              className={css.categoryImage}
+              src="/fuel-pump.svg"
+              alt="Engine Icon"
+            />{" "}
+            {engine}
           </span>
           {kitchen && (
-            <span>
-              <img src="/cup-hot.svg" alt="Kitchen Icon" /> Kitchen
+            <span className={css.buttonCategory}>
+              <img
+                className={css.categoryImage}
+                src="/cup-hot.svg"
+                alt="Kitchen Icon"
+              />{" "}
+              Kitchen
             </span>
           )}
           {tv && (
-            <span>
-              <img src="/tv.svg" alt="TV Icon" /> TV
+            <span className={css.buttonCategory}>
+              <img className={css.categoryImage} src="/tv.svg" alt="TV Icon" />{" "}
+              TV
             </span>
           )}
           {bathroom && (
-            <span>
-              <img src="/bi_droplet.svg" alt="Bathroom Icon" /> Bathroom
+            <span className={css.buttonCategory}>
+              <img
+                className={css.categoryImage}
+                src="/bi_droplet.svg"
+                alt="Bathroom Icon"
+              />
+              Bathroom
             </span>
           )}
         </div>
 
-        <button>Show more</button>
+        <Link to={`/catalog/${id}/features`} className={css.showButton}>
+          Show more
+        </Link>
       </div>
     </div>
   );
