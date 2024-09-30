@@ -5,16 +5,14 @@ import { nanoid } from "nanoid";
 export default function Features() {
   const data = useOutletContext();
 
-  // Проверка, что data не равен null или undefined
   if (!data) {
-    return <div>Loading...</div>; // Или любое другое сообщение, пока данные загружаются
+    return <div>Loading...</div>;
   }
 
-  // Извлечение диапазона ключей
   const slicedEntries = Object.entries(data).slice(6, 12);
 
   return (
-    <div>
+    <div className={css.features}>
       <div className={css.categories}>
         {data.ac && (
           <span className={css.buttonCategory}>
@@ -74,13 +72,13 @@ export default function Features() {
           </span>
         )}
       </div>
-      <div>
-        <h3>Vehicle details</h3>
-        <ul>
+      <div className={css.properiesContainer}>
+        <h3 className={css.propertiesTitle}>Vehicle details</h3>
+        <ul className={css.listProperties}>
           {slicedEntries.map(([key, value]) => (
-            <li key={nanoid()}>
-              <span>{key}</span>
-              <span>{value}</span>
+            <li key={nanoid()} className={css.listPropPart}>
+              <span className={css.listPropValue}>{key}</span>
+              <span className={css.listPropValue}>{value}</span>
             </li>
           ))}
         </ul>

@@ -1,0 +1,80 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 44px 57px;
+  border: 1px solid #dadde1;
+  border-radius: 10px;
+}
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: #101828;
+  margin-bottom: 8px;
+}
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6c717b;
+  margin-bottom: 24px;
+}
+.fieldContainer {
+  width: 100%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+.field {
+  box-sizing: border-box;
+  padding: 18px 0;
+  padding-left: 18px;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6c717b;
+  border: none;
+}
+.dateField {
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  border: none !important;
+  width: 100%;
+}
+.fieldArea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 0;
+  padding-left: 18px;
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  background-color: #f7f7f7;
+  border: none;
+  margin-bottom: 10px;
+}
+.formButton {
+  max-width: 166px;
+  border-radius: 200px;
+  padding: 16px 63px;
+  cursor: pointer;
+  background-color: #e44848;
+  border: none;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.formButton:hover {
+  background-color: #d84343;
+  transition: transform 2s ease-in-out;
+}

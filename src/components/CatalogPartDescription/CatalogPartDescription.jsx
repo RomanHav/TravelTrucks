@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import css from "./CatalogPartDescription.module.css";
 import { nanoid } from "nanoid";
 import clsx from "clsx";
+import FormCatalog from "../FormCatalog/FormCatalog";
 
 export default function CatalogPartDescription() {
   const catalogId = useSelector(catalogDataById);
@@ -84,7 +85,10 @@ export default function CatalogPartDescription() {
             Reviews
           </NavLink>
         </nav>
-        <Outlet context={data} />
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <Outlet context={data} />
+          <FormCatalog />
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,78 @@
+.features {
+  background-color: #f7f7f7;
+  padding: 44px 52px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.buttonCategory {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #101828;
+  background-color: #f2f4f7;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border: 1px solid black;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+.categoryImage {
+  width: 20px;
+  height: 20px;
+}
+.properiesContainer {
+  display: flex;
+  flex-direction: column;
+}
+.propertiesTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: #101828;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #dadde1;
+  margin-bottom: 24px;
+}
+.listProperties {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.listPropPart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.listPropValue {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #101828;
+  text-transform: capitalize;
+}
+.listPropValue {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #101828;
+}

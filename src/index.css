@@ -3,7 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 }
-
+textarea {
+  font-family: Inter, sans-serif;
+}
 body {
   margin: 0;
 }
